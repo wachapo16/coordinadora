@@ -15,11 +15,11 @@
             "line": 4,
             "name": "el usuario ha completado todos los campos requeridos correctamente con una fecha de recogida futura",
             "match": {
-              "location": "tests\\step_definitions\\given_steps.js:5"
+              "location": "tests\\step_definitions\\given_steps.js:6"
             },
             "result": {
               "status": "passed",
-              "duration": 2369599
+              "duration": 5541999
             }
           },
           {
@@ -28,11 +28,11 @@
             "line": 5,
             "name": "la fecha de recogida es dentro de los próximos 5 días hábiles",
             "match": {
-              "location": "tests\\step_definitions\\given_steps.js:18"
+              "location": "tests\\step_definitions\\given_steps.js:19"
             },
             "result": {
               "status": "passed",
-              "duration": 210000
+              "duration": 494899
             }
           },
           {
@@ -45,20 +45,550 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3069680400
+              "duration": 4066133900
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 7,
-            "name": "la respuesta debe ser 200 y el mensaje debe indicar \"Solicitud de recogida programada exitosamente.\"",
+            "name": "la respuesta debe ser un código 200",
             "match": {
-              "location": "tests\\step_definitions\\then_steps.js:3"
+              "location": "tests\\step_definitions\\then_steps.js:4"
             },
             "result": {
               "status": "passed",
-              "duration": 3758799
+              "duration": 3361999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "la respuesta debe indicar un mensaje \"Solicitud de recogida programada exitosamente.\"",
+            "match": {
+              "location": "tests\\step_definitions\\then_steps.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2798600
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "solicitud-de-recogida-de-productos;solicitud-de-recogida-con-fecha-pasada",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Solicitud de Recogida con Fecha Pasada",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "el usuario ha completado todos los campos requeridos correctamente con una fecha de recogida pasada",
+            "match": {
+              "location": "tests\\step_definitions\\given_steps.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 297700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "el usuario envía la solicitud de recogida",
+            "match": {
+              "location": "tests\\step_definitions\\when_steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1702394899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "la respuesta debe ser un código 200",
+            "match": {
+              "location": "tests\\step_definitions\\then_steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2895499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "la respuesta debe indicar un indicar que la fecha no debe ser menor a la fecha actual",
+            "match": {
+              "location": "tests\\step_definitions\\then_steps.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1556099
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "solicitud-de-recogida-de-productos;solicitud-de-recogida-con-campos-obligatorios-y-alfanuméricos",
+        "keyword": "Scenario",
+        "line": 23,
+        "name": "Solicitud de Recogida con Campos Obligatorios y Alfanuméricos",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 17,
+            "name": "un usuario quiere enviar una solicitud con un cuerpo JSON vacío",
+            "match": {
+              "location": "tests\\step_definitions\\given_steps.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 187099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "el usuario envía la solicitud de recogida",
+            "match": {
+              "location": "tests\\step_definitions\\when_steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 374920399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "la respuesta debe ser un código 200",
+            "match": {
+              "location": "tests\\step_definitions\\then_steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1878199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "la respuesta debe indicar errores con mensajes específicos para campos obligatorios vacíos",
+            "match": {
+              "location": "tests\\step_definitions\\then_steps.js:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 829699
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "solicitud-de-recogida-de-productos;solicitud-de-recogida-con-campos-obligatorios-y-alfanuméricos",
+        "keyword": "Scenario",
+        "line": 24,
+        "name": "Solicitud de Recogida con Campos Obligatorios y Alfanuméricos",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 17,
+            "name": "un usuario quiere enviar una solicitud con un cuerpo JSON vacío",
+            "match": {
+              "location": "tests\\step_definitions\\given_steps.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 49199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "el usuario envía la solicitud de recogida",
+            "match": {
+              "location": "tests\\step_definitions\\when_steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 311368900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "la respuesta debe ser un código 200",
+            "match": {
+              "location": "tests\\step_definitions\\then_steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2474500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "la respuesta debe indicar errores con mensajes específicos para campos obligatorios vacíos",
+            "match": {
+              "location": "tests\\step_definitions\\then_steps.js:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 414800
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "solicitud-de-recogida-de-productos;solicitud-de-recogida-con-campos-obligatorios-y-alfanuméricos",
+        "keyword": "Scenario",
+        "line": 25,
+        "name": "Solicitud de Recogida con Campos Obligatorios y Alfanuméricos",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 17,
+            "name": "un usuario quiere enviar una solicitud con un cuerpo JSON vacío",
+            "match": {
+              "location": "tests\\step_definitions\\given_steps.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 46700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "el usuario envía la solicitud de recogida",
+            "match": {
+              "location": "tests\\step_definitions\\when_steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 298133300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "la respuesta debe ser un código 200",
+            "match": {
+              "location": "tests\\step_definitions\\then_steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1796700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "la respuesta debe indicar errores con mensajes específicos para campos obligatorios vacíos",
+            "match": {
+              "location": "tests\\step_definitions\\then_steps.js:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 301600
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "solicitud-de-recogida-de-productos;solicitud-de-recogida-con-campos-obligatorios-y-alfanuméricos",
+        "keyword": "Scenario",
+        "line": 26,
+        "name": "Solicitud de Recogida con Campos Obligatorios y Alfanuméricos",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 17,
+            "name": "un usuario quiere enviar una solicitud con un cuerpo JSON vacío",
+            "match": {
+              "location": "tests\\step_definitions\\given_steps.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 44900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "el usuario envía la solicitud de recogida",
+            "match": {
+              "location": "tests\\step_definitions\\when_steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 293119900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "la respuesta debe ser un código 200",
+            "match": {
+              "location": "tests\\step_definitions\\then_steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2597699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "la respuesta debe indicar errores con mensajes específicos para campos obligatorios vacíos",
+            "match": {
+              "location": "tests\\step_definitions\\then_steps.js:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 274399
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "solicitud-de-recogida-de-productos;solicitud-de-recogida-con-campos-obligatorios-y-alfanuméricos",
+        "keyword": "Scenario",
+        "line": 27,
+        "name": "Solicitud de Recogida con Campos Obligatorios y Alfanuméricos",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 17,
+            "name": "un usuario quiere enviar una solicitud con un cuerpo JSON vacío",
+            "match": {
+              "location": "tests\\step_definitions\\given_steps.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "el usuario envía la solicitud de recogida",
+            "match": {
+              "location": "tests\\step_definitions\\when_steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 310480999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "la respuesta debe ser un código 200",
+            "match": {
+              "location": "tests\\step_definitions\\then_steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2719199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "la respuesta debe indicar errores con mensajes específicos para campos obligatorios vacíos",
+            "match": {
+              "location": "tests\\step_definitions\\then_steps.js:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 280800
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "solicitud-de-recogida-de-productos;solicitud-de-recogida-con-campos-obligatorios-y-alfanuméricos",
+        "keyword": "Scenario",
+        "line": 28,
+        "name": "Solicitud de Recogida con Campos Obligatorios y Alfanuméricos",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 17,
+            "name": "un usuario quiere enviar una solicitud con un cuerpo JSON vacío",
+            "match": {
+              "location": "tests\\step_definitions\\given_steps.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 36399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "el usuario envía la solicitud de recogida",
+            "match": {
+              "location": "tests\\step_definitions\\when_steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 282662099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "la respuesta debe ser un código 200",
+            "match": {
+              "location": "tests\\step_definitions\\then_steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2479099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "la respuesta debe indicar errores con mensajes específicos para campos obligatorios vacíos",
+            "match": {
+              "location": "tests\\step_definitions\\then_steps.js:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 397599
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "solicitud-de-recogida-de-productos;solicitud-de-recogida-duplicada-con-la-misma-fecha-y-dirección",
+        "keyword": "Scenario",
+        "line": 30,
+        "name": "Solicitud de Recogida Duplicada con la Misma Fecha y Dirección",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 31,
+            "name": "el usuario ha completado todos los campos requeridos correctamente con una fecha de recogida ya programada",
+            "match": {
+              "location": "tests\\step_definitions\\given_steps.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 132100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 32,
+            "name": "la fecha de recogida es la misma que una existente y la dirección también es la misma",
+            "match": {
+              "location": "tests\\step_definitions\\given_steps.js:61"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 177200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 33,
+            "name": "el usuario envía la solicitud de recogida",
+            "match": {
+              "location": "tests\\step_definitions\\when_steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 325473500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 34,
+            "name": "la respuesta debe ser un código 200",
+            "match": {
+              "location": "tests\\step_definitions\\then_steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3177900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "la respuesta debe indicar un error con el mensaje \"Error, Ya existe una recogida programada para hoy\"",
+            "match": {
+              "location": "tests\\step_definitions\\then_steps.js:77"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 377299
             }
           }
         ],
