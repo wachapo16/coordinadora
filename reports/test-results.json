@@ -1,0 +1,76 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "solicitud-de-recogida-de-productos;solicitud-de-recogida-con-fecha-futura",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Solicitud de Recogida con Fecha Futura",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "el usuario ha completado todos los campos requeridos correctamente con una fecha de recogida futura",
+            "match": {
+              "location": "tests\\step_definitions\\given_steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2369599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "la fecha de recogida es dentro de los próximos 5 días hábiles",
+            "match": {
+              "location": "tests\\step_definitions\\given_steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 210000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "el usuario envía la solicitud de recogida",
+            "match": {
+              "location": "tests\\step_definitions\\when_steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3069680400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "la respuesta debe ser 200 y el mensaje debe indicar \"Solicitud de recogida programada exitosamente.\"",
+            "match": {
+              "location": "tests\\step_definitions\\then_steps.js:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3758799
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "solicitud-de-recogida-de-productos",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Solicitud de Recogida de Productos",
+    "tags": [],
+    "uri": "tests\\features\\api_features.feature"
+  }
+]

@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js"
-  },
+    "test": "cucumber-js --format json:reports/test-results.json",
+    "generate-report": "npm run test && node ./scripts/generate_report.js"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
